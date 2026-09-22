@@ -46,6 +46,7 @@
             width: auto;
             margin: auto;
             text-align: center;
+            font-weight: bold;
         }
 
         label{
@@ -61,7 +62,7 @@
             width: 100%;
             padding: 10px;
             border-radius: 10px;
-            background-color: rgb(62, 28, 62);
+            background-color: rgb(245, 146, 162);
             color: white;
             font-weight: bold;
         }
@@ -82,6 +83,11 @@
 			text-align: center;
             position: fixed;
 		}
+        #hdrtext{
+            text-align: center;
+            color: rgb(142, 68, 81);
+            font-size: large;
+        }
     </style>
 </head>
 <body>
@@ -110,6 +116,7 @@
     <div class="container">
         <div id="header1">
             <h1>SKU Generator</h1>
+            <p id="hdrtext">Benitez & Godino - Coffee Shop 🍵</p>
         </div>
             
         <br>
@@ -117,7 +124,7 @@
         <label for="options">🏷️ Category</label>
             <br>
             <select id="category" class="form-control">
-                <option>options</option>
+                <option>Choose a Category</option>
                 <option>Beverages</option>
                 <option>Pastries</option>
                 <option>Perishable</option>
@@ -142,7 +149,7 @@
         <hr>
 
         <div id="output1">
-            <p>Your generated SKU will apear here:</p>
+            <p>Your generated SKU will appear here:</p>
             <script type="py" src="sku.py"></script>
         </div>
     </div>
