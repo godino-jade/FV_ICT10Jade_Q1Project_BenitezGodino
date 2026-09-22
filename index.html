@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q1 Project</title>
+    <title>Q1 Project | Receipt Generator</title>
 
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
@@ -13,94 +13,77 @@
 
     <style>
         body{
-           background-color: pink;
+           background-color: rgb(146, 120, 125);
            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-           
         }
-        h1{
-           
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            background: pink;
+
+        .nav-link{
+            color: rgb(214, 116, 177);
+            font-weight: bold;
+        }
+
+        .container{
+            border-radius: 10px;
+            background-color: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 700px;
+            box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+            padding: 20px;
+        }
+
+        #header1{
+            background-color: pink;
+            padding: 5px;
+            padding-top: 20px;
+            border-radius: 10px;
+        }  
+    
+        h1{  
             color: rgb(184, 111, 123);
-            border-radius: 15px;
             height: 50px;
             width: auto;
             margin: auto;
             text-align: center;
-           
-            
-
-        }
-        .container{
-            border-radius: 10px;
-            background-color: white;
-            margin: auto;
-            
-            width: 700px;
-            box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
-            padding: 10px;            
+            font-weight: bold;
         }
 
-
-
-        .footer {
-			padding-top: 10px;
-			height: 40px;
-			position: fixed;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			background-color: pink;
-			color: rgb(102, 49, 58);
-			text-align: center;
-			}
-
-        #btn{
-            background-color: pink;
-            color: rgb(184, 111, 123);
-            border: none;
-            width: 680px;
-            height: 30px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: 700;
-        }
-        p{
-            margin: auto;
-            align-items: center;
+        #hdrtext{
+            text-align: center;
+            color: rgb(142, 68, 81);
+            font-size: large;
         }
 
         h2{
             font-size: 20px;
             color: rgb(171, 113, 122);
-            background-color: #faf8f8;
-            border-radius: 5px;
-
+            font-weight: bold;
         }
-        input[type="checkbox"] {
-                margin-right: 12px;
-                accent-color: pink;}
-                
 
-        
-        .menu-list {
+        input[type="checkbox"]{
+            margin-right: 12px;
+            accent-color: pink;
+        }
+                
+        .menu-list{
             display: flex;
             flex-direction: column;
             gap: 10px;
             margin-top: 10px;
         }
  
-        .menu-item {
+        .menu-item{
             display: flex;
             align-items: center;
             background-color: #ffffff;
             border: 1px solid #eee;
-            border-radius: 14px;
-            box-shadow: 2px 3px 8px rgba(0,0,0,0.12);
+            border-radius: 10px;
+            box-shadow: 5px 3px 15px 2px rgba(232,89,255,0.24);
+            border-color: rgba(43, 41, 41, 0.2);
             padding: 14px 
         }
  
-        .menu-item label {
+        .menu-item label{
             flex: 1;
             font-weight: 600;
             font-size: 16px;
@@ -109,89 +92,118 @@
             text-align: left;
         }
  
-        .menu-item .price {
+        .menu-item .price{
             color: rgb(227, 121, 139);
             font-size: 16px;
             font-weight: 1000;
         }
+        
+        #btn{
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(62, 28, 62);
+            color: white;
+            font-weight: bold;
+        }
+
+        #output1{
+            margin: auto;
+            color: rgb(80, 80, 80);
+        }
+
+        .footer{
+			padding-top: 10px;
+			height: 40px;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: pink;
+			color: rgb(214, 116, 177);;
+			text-align: center;
+		}
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg" style="background-color: #00000074;">
+    <nav class="navbar navbar-expand-lg" style="background-color: pink;">
         <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-            <a class="nav-link">Skewer</a>
-            </li>
-                    
-            <li class="nav-item">
-            <a class="nav-link" href="sku.html">SKU Generator</a>
-            </li>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link">Benitez & Godino</a>
+                    </li>
+                </ul>
 
-            <li class="nav-item">
-            <a class="nav-link" href="index.html">Receipt Generator</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Receipt Generator</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="sku.html">SKU Generator</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <br>
-   <div class="container">
-        <div id="menu">
-            <h1>Entrep Fair</h1>
+
+    <div class="container">
+        <div id="header1">
+            <h1>10 Jade's Entrep Fair</h1>
+            <p id="hdrtext">Benitez & Godino - Coffee Shop 🍵</p>
         </div>
         <br>
-        <center>
+
         <h2>Menu</h2>
-        </center>
-          <div class="menu-list">
-            <div class="menu-item">
-                <input type="checkbox" id="item1" value="129">
-                <label for="item1">Americano</label>
-                <span class="price">₱129</span>
-            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <input type="checkbox" id="item1" value="129">
+                    <label for="item1">Americano</label>
+                    <span class="price">₱129</span>
+                </div>
  
-            <div class="menu-item">
-                <input type="checkbox" id="item2" value="149">
-                <label for="item2">Spanish Latte</label>
-                <span class="price">₱149</span>
-            </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="item2" value="149">
+                    <label for="item2">Spanish Latte</label>
+                    <span class="price">₱149</span>
+                </div>
  
-            <div class="menu-item">
-                <input type="checkbox" id="item3" value="139">
-                <label for="item3">Cold Brew Malt</label>
-                <span class="price">₱139</span>
-            </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="item3" value="139">
+                    <label for="item3">Cold Brew Malt</label>
+                    <span class="price">₱139</span>
+                </div>
  
-            <div class="menu-item">
-                <input type="checkbox" id="item4" value="159">
-                <label for="item4">Affogato</label>
-                <span class="price">₱159</span>
-            </div>
- 
-            <div class="menu-item">
-                <input type="checkbox" id="item5" value="145">
-                <label for="item5">Caramel Macchiato</label>
-                <span class="price">₱145</span>
-            </div>
-        </div>
-        <br>
- 
-
-        <button type="button" py-click="display_char" id="btn">Create Order</button>
-        <hr>
-        <center>
-        <p style="color: gray;">Your order summary will appear here</p></center>
-        
-        <div id="output1"></div>
-
+                <div class="menu-item">
+                    <input type="checkbox" id="item4" value="159">
+                    <label for="item4">Affogato</label>
+                    <span class="price">₱159</span>
+                </div>
     
-        
-	    <div class="footer">
+                <div class="menu-item">
+                    <input type="checkbox" id="item5" value="145">
+                    <label for="item5">Caramel Macchiato</label>
+                    <span class="price">₱145</span>
+                </div>
+            </div>
+        <br>    
+
+        <button type="button" py-click="create_order" id="btn" class="form-control">Generate SKU</button>
+            
+        <hr>
+
+        <div id="output1">
+            <p>Your order summary will appear here:</p>
+            <script type="py" src="main.py"></script>
+        </div>
+
+        <hr>
+
+        <div id="output2"></div>
+    </div>
+
+	<div class="footer">
 		<b>SKU Generator - 1st Quarter Project</b>
-	    </div>
-
-
+	</div>
 </body>
 </html>
