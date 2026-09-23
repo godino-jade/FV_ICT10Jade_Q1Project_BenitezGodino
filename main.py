@@ -24,7 +24,7 @@ def create_order(e):
     # Grand total
     total = subtotal + tax 
 
-    display(f"Total: ₱{total}.", target="output1", append=True)
-    display(f"Subtotal: ₱{subtotal}.", target="output1", append=True)
-    display(f"Tax: ₱{tax}.", target="output1", append=True)
+    display(f"Total: ₱{total}", target="output1", append=True)
+    display(f"Subtotal: ₱{subtotal}", target="output1", append=True)
+    display(f"Tax: ₱{tax}", target="output1", append=True)
     display(f"Thank you for your order!", target="output2", append=True)
